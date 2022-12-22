@@ -38,6 +38,11 @@ alias h='history -i'
 
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
 
+# Terraform aliases
+alias tfv="terraform validate"
+alias tfp="terraform plan"
+alias tfa="terraform apply"
+
 export HISTSIZE=99999
 export HISTFILESIZE=99999
 export SAVEHIST=$HISTSIZE
