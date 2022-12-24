@@ -47,6 +47,8 @@ export HISTSIZE=99999
 export HISTFILESIZE=99999
 export SAVEHIST=$HISTSIZE
 
+alias week='date +%V'
+
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
 
