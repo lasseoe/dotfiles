@@ -36,18 +36,24 @@ alias mute='osascript -e "set Volume 0"'
 # show date and time in history
 alias h='history -i'
 
+alias lt='ls -lth'
+alias cz='chezmoi'
+
 alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+# undo last commit
+alias gu='git reset --soft HEAD~'
 
 # Terraform aliases
-alias tfv="terraform validate"
-alias tfp="terraform plan"
-alias tfa="terraform apply"
+alias tfv='terraform validate'
+alias tfp='terraform plan'
+alias tfa='terraform apply'
 
 export HISTSIZE=99999
 export HISTFILESIZE=99999
 export SAVEHIST=$HISTSIZE
 
 alias week='date +%V'
+alias dayear='date +%V'
 
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
