@@ -14,6 +14,47 @@ function it2prof() {
   echo -e "\033]50;SetProfile=$1\a"
 }
 
+# dnscontrol
+function dnsc {
+  if [ -f dnsconfig.js ]; then
+    ## read header
+    CREDS=$(head -1 dnsconfig.js | awk '{print $2}')
+
+    case "$1" in
+        check)
+                dnscontrol check
+                ;;
+        preview)
+                dnscontrol preview --creds "!op read op://${CREDS}/credential"
+                ;;
+        push)
+                dnscontrol push --creds "!op read op://${CREDS}/credential"
+                ;;
+        *)
+                echo "Usage: dnsc [check|preview|push]"
+                echo ""
+                return 1
+                ;;
+    esac
+  else
+    echo "dnsc: no dnsconfig.js found!"
+    return 1
+  fi
+}
+
+# Creates two passwords, first is alphanumeric and
+# second is alphanumeric with some special characters
+#
+function genpass {
+  if [ -z "$1" ]; then
+    echo "genpass takes one argument, password length, i.e. genpass 32"
+    return 1
+  else
+    cat /dev/random | env LC_ALL=C tr -dc a-zA-Z0-9 | fold -w $1 | head -1
+    cat /dev/random | env LC_ALL=C tr -dc 'a-zA-Z0-9--:&!%,+' | fold -w $1 | head -1
+  fi
+}
+
 export icloud=~/Library/Mobile\ Documents/com\~apple\~CloudDocs
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
@@ -48,12 +89,16 @@ alias tfv='terraform validate'
 alias tfp='terraform plan'
 alias tfa='terraform apply'
 
+alias week='date +%V'
+alias dayear='date +%V'
+
+alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
+alias myip='curl http://ipecho.net/plain; echo'
+alias dus='du -ach | sort -h'
+
 export HISTSIZE=99999
 export HISTFILESIZE=99999
 export SAVEHIST=$HISTSIZE
-
-alias week='date +%V'
-alias dayear='date +%V'
 
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
