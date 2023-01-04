@@ -1,4 +1,7 @@
 
+# Import color definitions
+source ~/.zshrc-colordef.sh
+
 # Delete a given line number in the known_hosts file.
 function knownrm() {
   re='^[0-9]+$'
@@ -81,6 +84,28 @@ function genpass {
   fi
 }
 
+# Ignore this! :-)
+# It's a hack to give me git status of a bunch of repos I work with regularly
+# comes in handy when unsure of their status.
+function gitstatusall {
+cols=$(tput cols)
+lines=$(tput lines)
+(  cat $HOME/.gitstatusall | while read gitpath
+  do
+    draw 5 "\\u2501"
+    draw 1 "\\u25b6"
+    printf " ${BGBLUE}${FGGRAY}${gitpath}${CLEAR} " 
+    #draw 1 "\\u23ac"
+    #draw 10 "\\u2501"
+    printf "\u001b[80G"
+    draw 1 "\\u25c0"
+    draw 5 "\\u2501"
+    echo
+    eval cd ${gitpath}
+    git status -s
+  done )
+}
+
 #
 # End of functions
 #
@@ -119,6 +144,8 @@ alias gitundo='git reset --soft HEAD~'
 alias tfv='terraform validate'
 alias tfp='terraform plan'
 alias tfa='terraform apply'
+alias tff='terraform fmt'
+alias tff='tflint'
 
 # show date and time in history
 alias h='history -i'
