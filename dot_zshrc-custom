@@ -84,6 +84,22 @@ function genpass {
   fi
 }
 
+# https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
+function git_ahead_behind {
+  curr_branch=$(git rev-parse --abbrev-ref HEAD);
+  curr_remote=$(git config branch.$curr_branch.remote);
+  curr_merge_branch=$(git config branch.$curr_branch.merge | cut -d / -f 3);
+  git rev-list --left-right --count $curr_branch...$curr_remote/$curr_merge_branch | tr -s '\t' '|';
+}
+
+function gitlr {
+  git config remote.origin.url
+  printf "Local:  "
+  git rev-parse HEAD
+  printf "Remote: "
+  git ls-remote -q | grep --color=never HEAD
+}
+
 # Ignore this! :-)
 # It's a hack to give me git status of a bunch of repos I work with regularly
 # comes in handy when unsure of their status.
@@ -141,8 +157,9 @@ alias gitundo='git reset --soft HEAD~'
 #
 # Terraform
 #
+alias tfi='terraform init'
 alias tfv='terraform validate'
-alias tfp='terraform plan'
+alias tfp='terraform validate && terraform plan'
 alias tfa='terraform apply'
 alias tff='terraform fmt'
 alias tff='tflint'
@@ -150,6 +167,7 @@ alias tff='tflint'
 # show date and time in history
 alias h='history -i'
 
+alias tree='tree -h --du -a'
 alias lt='ls -lth'
 alias cz='chezmoi'
 alias week='date +%V'
@@ -186,7 +204,7 @@ set -o vi
 # zsh auto completion
 autoload -Uz compinit && compinit
 # Case insensitive.
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+#zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
 
 source ${brewprefix}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 #source '${brewprefix}/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
@@ -194,9 +212,13 @@ source ${brewprefix}/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # enable bash auto completion support
 autoload -U +X bashcompinit && bashcompinit
-# auto completion for Azure CLI
+
+# Azure CLI auto-completion
 source ${brewprefix}/etc/bash_completion.d/az
 
-# auto completion for 1Password op
+# 1Password 'op' command auto-completion
 eval "$(op completion zsh)"; compdef _op op
+
+# Terraform auto-completion
+complete -o nospace -C ${brewprefix}/bin/terraform terraform
 

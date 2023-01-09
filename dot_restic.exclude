@@ -1,4 +1,8 @@
 $HOME/.npm
+$HOME/.kubectl/bin
+$HOME/.tflint.d/plugins
+$HOME/.terrascan
+$HOME/.terraform.d/plugin-cache
 $HOME/go/bin
 $HOME/go/pkg
 $HOME/00-courses
