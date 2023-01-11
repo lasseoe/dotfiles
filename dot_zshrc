@@ -63,6 +63,9 @@ CASE_SENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
+# Oh My Zsh will print a red ellipsis to indicate that Zsh is still processing a completion request, and will disappear when the completion finishes. This is useful for example when completing a command that requires a lot of processing before offering completion entries.
+COMPLETION_WAITING_DOTS=true
+
 # setup zsh autocompletion for Homebrew when using /usr/local/bin/zsh (lasseoe 20210810)
 if type brew &>/dev/null; then
   FPATH=${brewprefix}/share/zsh/site-functions:$FPATH
