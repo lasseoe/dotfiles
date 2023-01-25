@@ -84,6 +84,16 @@ function genpass {
   fi
 }
 
+# zid: generate a 32-bit secure random lowercase hex identifier
+function zid {
+  hexdump -n 16 -v -e '16/1 "%02x" "\n"' /dev/random
+}
+
+# show epoch seconds
+function epoch {
+  date "+%s"
+}
+
 # https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
 function git_ahead_behind {
   curr_branch=$(git rev-parse --abbrev-ref HEAD);
