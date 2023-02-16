@@ -186,6 +186,8 @@ alias psg='ps aux | grep -v grep | grep -i -e VSZ -e'
 alias myip='curl http://ipecho.net/plain; echo'
 alias dus='du -ach | sort -h'
 
+alias mempw='sf-pwgen -a memorable -l 32'
+
 export HISTSIZE=99999
 export HISTFILESIZE=99999
 export SAVEHIST=$HISTSIZE
