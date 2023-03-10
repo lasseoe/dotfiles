@@ -9,14 +9,13 @@ $HOME/00-courses
 $HOME/Downloads/tmp
 $HOME/Downloads/no-backup
 $HOME/Work/Customers/*/tmpshare
-$HOME/Library/Caches
-$HOME/Library/Containers/com.tinyspeck.slackmacgap/data/Library/Application Support/Slack/Cache
-$HOME/Library/Containers/com.tinyspeck.slackmacgap/Data/Library/Application Support/Slack/Service Worker/CacheStorage
+$HOME/Library/Logs/ScreenSplit.log
+$HOME/Library/**/Cache
+$HOME/Library/**/Caches
+$HOME/Library/**/CacheStorage
+$HOME/Library/**/GPUCache
+$HOME/Library/**/Code Cache
+$HOME/Library/**/update-cache
 $HOME/Library/Containers/com.docker.docker
-$HOME/Library/Application Support/Caches
-$HOME/Library/Application Support/Signal/update-cache
-$HOME/Library/Application Support/Microsoft/Teams/Cache
-$HOME/Library/Application Support/Microsoft/Teams/GPUCache
-$HOME/Library/Application Support/Microsoft/Teams/Code Cache
-$HOME/Library/Application Support/Microsoft/Teams/Service Worker/CacheStorage
-$HOME/Library/Application Support/Google/Chrome/Default/Service Worker/CacheStorage/
+$HOME/Library/Application Support/rancher-desktop/lima
+$HOME/Library/Group Containers/group.com.apple.secure-control-center-preferences/Library/Preferences/group.com.apple.secure-control-center-preferences.av.plist
