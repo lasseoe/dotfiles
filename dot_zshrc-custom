@@ -188,9 +188,15 @@ alias dus='du -ach | sort -h'
 
 alias mempw='sf-pwgen -a memorable -l 32'
 
+# Set dark-friendly theme for Bat https://github.com/sharkdp/bat
+export BAT_THEME=Coldark-Dark
+
 export HISTSIZE=99999
 export HISTFILESIZE=99999
 export SAVEHIST=$HISTSIZE
+
+# Go
+export GOPATH=/Users/lasseoe/go
 
 # Don't require escaping globbing characters in zsh.
 unsetopt nomatch
@@ -233,4 +239,7 @@ eval "$(op completion zsh)"; compdef _op op
 
 # Terraform auto-completion
 complete -o nospace -C ${brewprefix}/bin/terraform terraform
+
+# set PATH
+export PATH=$PATH:$GOPATH/bin
 
