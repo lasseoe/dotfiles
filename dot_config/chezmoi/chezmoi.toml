@@ -1,3 +1,3 @@
 [diff]
-    command = "/opt/homebrew/bin/delta"
+    command = "delta"
     args = ["{{ .Destination }}", "{{ .Target }}"]

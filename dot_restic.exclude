@@ -9,6 +9,8 @@ $HOME/00-courses
 $HOME/Downloads/tmp
 $HOME/Downloads/no-backup
 $HOME/Work/Customers/*/tmpshare
+$HOME/Library/Fonts
+$HOME/Library/Caches
 $HOME/Library/Logs/ScreenSplit.log
 $HOME/Library/**/Cache
 $HOME/Library/**/Caches
