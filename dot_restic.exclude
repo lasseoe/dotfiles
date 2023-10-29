@@ -18,6 +18,7 @@ $HOME/Library/**/CacheStorage
 $HOME/Library/**/GPUCache
 $HOME/Library/**/Code Cache
 $HOME/Library/**/update-cache
+$HOME/Library/Mobile Documents
 $HOME/Library/Containers/com.docker.docker
 $HOME/Library/Application Support/rancher-desktop/lima
 $HOME/Library/Group Containers/group.com.apple.secure-control-center-preferences/Library/Preferences/group.com.apple.secure-control-center-preferences.av.plist
