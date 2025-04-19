@@ -172,7 +172,7 @@ alias tfv='terraform validate'
 alias tfp='terraform validate && terraform plan'
 alias tfa='terraform apply'
 alias tff='terraform fmt'
-alias tff='tflint'
+alias tfl='tflint'
 
 # show date and time in history
 alias h='history -i'
@@ -188,12 +188,16 @@ alias dus='du -ach | sort -h'
 
 alias mempw='sf-pwgen -a memorable -l 32'
 
+alias els="eza -g --icons=automatic --git -smod -r"
+
 # Set dark-friendly theme for Bat https://github.com/sharkdp/bat
 export BAT_THEME=Coldark-Dark
 
 export HISTSIZE=99999
 export HISTFILESIZE=99999
 export SAVEHIST=$HISTSIZE
+
+export EZA_COLORS="uu=0:gu=0:da=94:*.yaml=38;5;225:*.yml=38;5;225:*.gz=38;5;204"
 
 # Go
 export GOPATH=/Users/lasseoe/go
