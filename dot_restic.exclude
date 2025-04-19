@@ -3,6 +3,11 @@ $HOME/.kubectl/bin
 $HOME/.tflint.d/plugins
 $HOME/.terrascan
 $HOME/.terraform.d/plugin-cache
+$HOME/.orbstack/data
+$HOME/.Trash
+$HOME/.local/share/powershell
+$HOME/.vscode/extensions
+$HOME/src-ext
 $HOME/go/bin
 $HOME/go/pkg
 $HOME/00-courses
@@ -18,7 +23,20 @@ $HOME/Library/**/CacheStorage
 $HOME/Library/**/GPUCache
 $HOME/Library/**/Code Cache
 $HOME/Library/**/update-cache
+$HOME/Library/Metadata
 $HOME/Library/Mobile Documents
 $HOME/Library/Containers/com.docker.docker
-$HOME/Library/Application Support/rancher-desktop/lima
+$HOME/Library/Application Support/Spotify
+$HOME/Library/Application Support/discord
+$HOME/Library/Application Support/Code/CacheData
+$HOME/Library/Application Support/Garmin
+$HOME/Library/Application Support/Lens/Cache
+$HOME/Library/Application Support/Lens/binaries
+$HOME/Library/Application Support/Lens/node_modules
+$HOME/Library/Application Support/rancher-desktop
+$HOME/Library/Application Support/Microsoft/Teams/Service Worker
+$HOME/Library/Application Support/Microsoft/Teams/Cache
+$HOME/Library/Containers/com.tinyspeck.slackmacgap/
+$HOME/Library/Containers/com.microsoft.teams2
 $HOME/Library/Group Containers/group.com.apple.secure-control-center-preferences/Library/Preferences/group.com.apple.secure-control-center-preferences.av.plist
+$HOME/Library/Group Containers/*orbstack
