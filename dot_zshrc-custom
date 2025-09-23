@@ -142,6 +142,7 @@ export icloud=~/Library/Mobile\ Documents/com\~apple\~CloudDocs
 #export HOMEBREW_AUTO_UPDATE_SECS=604800
 brewcache=`brew --cache`
 alias brewclean="rm -rf ${brewcache} ; brew cleanup -s"
+alias bru="brew update -f && brew upgrade"
 
 #
 # macOS specific
