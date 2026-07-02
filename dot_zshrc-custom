@@ -140,6 +140,8 @@ export icloud=~/Library/Mobile\ Documents/com\~apple\~CloudDocs
 
 # Tell homebrew to not autoupdate every single time I run it (just once a week).
 #export HOMEBREW_AUTO_UPDATE_SECS=604800
+# Do not upgrade casks with 'auto_updates true'
+export HOMEBREW_NO_UPGRADE_AUTO_UPDATES_CASKS=1
 brewcache=`brew --cache`
 alias brewclean="rm -rf ${brewcache} ; brew cleanup -s"
 alias bru="brew update -f && brew upgrade"
