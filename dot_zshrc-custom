@@ -248,3 +248,5 @@ complete -o nospace -C ${brewprefix}/bin/terraform terraform
 # set PATH
 export PATH=$PATH:$GOPATH/bin
 
+bindkey ' ' magic-space
+

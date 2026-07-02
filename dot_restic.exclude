@@ -1,4 +1,5 @@
 $HOME/.npm
+$HOME/.ollama
 $HOME/.kubectl/bin
 $HOME/.tflint.d/plugins
 $HOME/.terrascan
@@ -36,7 +37,9 @@ $HOME/Library/Application Support/Lens/node_modules
 $HOME/Library/Application Support/rancher-desktop
 $HOME/Library/Application Support/Microsoft/Teams/Service Worker
 $HOME/Library/Application Support/Microsoft/Teams/Cache
+$HOME/Library/Application Support/Google/GoogleUpdater
 $HOME/Library/Containers/com.tinyspeck.slackmacgap/
 $HOME/Library/Containers/com.microsoft.teams2
 $HOME/Library/Group Containers/group.com.apple.secure-control-center-preferences/Library/Preferences/group.com.apple.secure-control-center-preferences.av.plist
+$HOME/Library/Application Support/FileProvider/**/wharf/tombstone/a
 $HOME/Library/Group Containers/*orbstack
