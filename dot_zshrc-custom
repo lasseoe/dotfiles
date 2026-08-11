@@ -94,6 +94,27 @@ function epoch {
   date "+%s"
 }
 
+function warin {
+  whois -h whois.arin.net $1
+}
+
+function wripe {
+  whois -h whois.ripe.net $1
+}
+
+function wapnic {
+  whois -h whois.apnic.net $1
+}
+
+function wlacnic {
+  whois -h whois.lacnic.net $1
+}
+
+function wdkhm {
+  whois -h whois.dk-hostmaster.dk $1
+}
+
+
 # https://www.atlassian.com/git/tutorials/git-forks-and-upstreams
 function git_ahead_behind {
   curr_branch=$(git rev-parse --abbrev-ref HEAD);
